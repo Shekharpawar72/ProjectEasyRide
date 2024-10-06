@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    
+    <div id="form-container" class="flex w-full h-screen ">
+        <div class="w-full flex items-center justify-center lg:w-1/2">
+          <div>
+            <div class="bg-blue-300 text-white p-2 rounded-lg mb-4 hidden" id="success-message"></div>
+      
+            <!-- Signup Form -->
+            <div class="bg-white px-10 py-30 border-2 border-blue-300 shadow-emerald-100 rounded-3xl" id="signup-form">
+               
+              <h2 class="text-cyan-500 text-lg flex justify-center">EasyRide</h2>
+              <h1 class="text-4xl text-black font-semibold mt-5">YOUR ADVENTURE'S <br> START HERE</h1>
+              <form onsubmit="handleSignup(event)" class="mt-4">
+                <div>
+                  <label class="text-lg font-medium">Name</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Name" id="name" />
+                  <p id="name-error" class="text-red-500"></p>
+                </div>
+                <div>
+                  <label class="text-lg font-medium">Email</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Email" id="email" />
+                  <p id="email-error" class="text-red-500"></p>
+                </div>
+                <div>
+                  <label class="text-lg font-medium">Phone No</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Phone number" id="phone" />
+                  <p id="phone-error" class="text-red-500"></p>
+                </div>
+                <div>
+                  <label class="text-lg font-medium">Password</label>
+                  <div class="relative">
+                    <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Password" type="password" id="password" />
+                    <span class="absolute right-3 top-3 cursor-pointer" id="toggle-password">👁️</span>
+                  </div>
+                  <p id="password-error" class="text-red-500"></p>
+                  <!-- Password Conditions -->
+                  <div class="mt-2" id="password-conditions">
+                    <p id="lowercase" class="text-red-500">❌ At least one lowercase letter</p>
+                    <p id="uppercase" class="text-red-500">❌ At least one uppercase letter</p>
+                    <p id="number" class="text-red-500">❌ At least one number</p>
+                    <p id="length" class="text-red-500">❌ Minimum 8 characters</p>
+                  </div>
+                </div>
+                <div>
+                  <label class="text-lg font-medium">Confirm Password</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Reenter Your Password" type="password" id="confirm-password" />
+                  <p id="confirm-password-error" class="text-red-500"></p>
+                </div>
+                <div class="mt-7 flex flex-col gap-y-5">
+                  <button type="submit" class="active:scale-[.98] active:duration-75 transition-all py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold">Sign up</button>
+                </div>
+              </form>
+              <div class="mt-2 text-center">
+                <p class="text-sm mb-4">Already have an account? <a href="#" class="text-blue-500 hover:underline" id="show-login">Login here</a></p>
+              </div>
+            </div>
+
+    
+      
+            <!-- Login Form -->
+            <div class="bg-white px-10 py-30 border-2 border-blue-300 shadow-emerald-100 rounded-3xl hidden" id="login-form">
+              <h2 class="text-cyan-500 text-lg flex justify-center">EasyRide</h2>
+              <h1 class="text-4xl text-black font-semibold mt-5">Welcome Back!</h1>
+              <form onsubmit="handleLogin(event)" class="mt-4">
+                <div>
+                  <label class="text-lg font-medium">Email</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Email" id="login-email" />
+                  <p id="login-email-error" class="text-red-500"></p>
+                </div>
+                <div>
+                  <label class="text-lg font-medium">Password</label>
+                  <input class="w-full h-full border-2 border-blue-300 rounded-xl p-2 mt-1 bg-transparent" placeholder="Enter Your Password" type="password" id="login-password" />
+                  <p id="login-password-error" class="text-red-500"></p>
+                </div>
+                <div class="mt-2">
+                  <a href="#" class="text-blue-500 hover:underline">Forgot password?</a>
+                </div>
+                <div class="mt-7 flex flex-col gap-y-5">
+                  <button type="submit" class="active:scale-[.98] active:duration-75 transition-all py-3 rounded-xl bg-blue-600 text-white text-lg font-semibold">Login</button>
+                </div>
+              </form>
+              <div class="mt-4 text-center">
+                <p class="text-sm mb-4">Don't have an account? <a href="#" class="text-blue-500 hover:underline" id="show-signup">Register here</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block lg:w-1/2 bg-cover bg-center">
+        <!-- This div will cover the right side with an image on large screens -->
+         <div class="side-image"></div>
+    </div>
+        
+  </div>
+      
+      
+
+
+<script src="from.js"></script>
+
+</body>
+</html>
