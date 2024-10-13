@@ -1,12 +1,12 @@
 
-// function showSidebar(){
-//     const sidebar = document.querySelector('.sidebar')
-//     sidebar.style.display = 'flex'
-//   }
-//   function hideSidebar(){
-//     const sidebar = document.querySelector('.sidebar')
-//     sidebar.style.display = 'none'
-//   }
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
 
 // window.location.href = "from.html"
 
@@ -42,4 +42,14 @@ document.getElementById('logout-btn').addEventListener('click', function () {
   window.location.reload();
 });
 
+///// about us page 
+document.getElementById('more-info-btn').addEventListener('click', function() {
+  window.location.href = 'aboutus.html'; // Replace with your actual More Info page link
+});
 
+
+//// rentout page 
+
+document.getElementById('upload-details-butn').addEventListener('click', function() {
+  window.location.href = 'rentout.html'; // Replace with your actual More Info page link
+});
